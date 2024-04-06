@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Calculator</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
@@ -11,20 +11,19 @@
     <h1>Simple Calculator</h1>
 
     <div class="container">
-      <!-- поле для вывода результата -->
       <div id="output">00</div>
 
-      <!-- поле для ввода чисел -->
-      <input type="text" id="input_1" placeholder="Value 1" />
-      <input type="text" id="input_2" placeholder="Value 2" />
+      <div class="folder">
+        <input id="input_1" type="text" placeholder="Value 1" />
+        <input id="input_2" type="text" placeholder="Value 2" />
+      </div>
 
-      <!-- контейнер с кнопками -->
-      <div class="btns_container">
-        <button class="btns" onclick="add()">+</button>
-        <button class="btns">-</button>
-        <button class="btns">*</button>
-        <button class="btns">/</button>
-        <button class="btns" id="reset">Reset</button>
+      <div class="container_btns">
+        <button onclick="add()" class="btns">+</button>
+        <button onclick="minus()" class="btns">-</button>
+        <button onclick="mult()" class="btns">*</button>
+        <button onclick="del()" class="btns">/</button>
+        <button onclick="reset()" class="btns" id="reset">Reset</button>
       </div>
     </div>
   </body>
