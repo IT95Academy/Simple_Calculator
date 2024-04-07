@@ -1,45 +1,27 @@
-const add = () => {
-  let input1 = +document.querySelector('#input_1').value;
-  let input2 = +document.querySelector('#input_2').value;
-  let output = document.querySelector('#output');
-  let res;
+// получаем элементы по id
+let input1 = document.querySelector('#input_1');
+let input2 = document.querySelector('#input_2');
+let res = document.querySelector('#output');
 
-  res = input1 + input2;
-  output.innerHTML = res;
+// функция прибовления двух чисел
+const add = () => {
+  res.innerHTML = +input1.value + +input2.value;
 };
 
-const minus = () => {
-  let input1 = +document.querySelector('#input_1').value;
-  let input2 = +document.querySelector('#input_2').value;
-  let output = document.querySelector('#output');
-  let res;
-
-  res = input1 - input2;
-  output.innerHTML = res;
+const min = () => {
+  res.innerHTML = +input1.value - +input2.value;
 };
 
 const mult = () => {
-  let input1 = +document.querySelector('#input_1').value;
-  let input2 = +document.querySelector('#input_2').value;
-  let output = document.querySelector('#output');
-  let res;
-
-  res = input1 * input2;
-  output.innerHTML = res;
+  res.innerHTML = +input1.value * +input2.value;
 };
 
 const del = () => {
-  let input1 = +document.querySelector('#input_1').value;
-  let input2 = +document.querySelector('#input_2').value;
-  let output = document.querySelector('#output');
-  let res;
-
-  res = input1 / input2;
-  output.innerHTML = res;
+  res.innerHTML = +input1.value / +input2.value;
 };
 
 const reset = () => {
-  document.querySelector('#input_1').value = '';
-  document.querySelector('#input_2').value = '';
-  document.querySelector('#output').innerHTML = '00';
+  res.innerHTML = '00';
+  input1.value = '';
+  input2.value = '';
 };
